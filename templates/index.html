@@ -5,12 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-<h1>IT Works</h1>
-<h2>My name is {{ name }}</h2>
+<h1>Hello Django</h1>
+<h2>Persons in database</h2>
 <ul>
     <li>Name, Age</li>
     {% for person in people %}
-        <li>{{ person.name }}, {{ person.age }}</li>
+        <li>{{ person.name }}, {{ person.age }}, {{ person.home_town }}</li>
     {% endfor %}
 </ul>
 </body>
