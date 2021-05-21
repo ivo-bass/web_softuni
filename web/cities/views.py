@@ -1,7 +1,6 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 
-from web.cities.models import Person
+from web.cities.models import Person, Phone
 
 
 def index(request):
@@ -12,6 +11,9 @@ def index(request):
     return render(request, 'index.html', context)
 
 
-
 def list_phones(request):
-    return HttpResponse('Phones list')
+    context = {
+        'title': 'Phones List',
+        'phones': Phone.objects.all(),
+    }
+    return render(request, 'phones.html', context)

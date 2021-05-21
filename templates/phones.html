@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<h1>
+    {{ title }}
+</h1>
+<ul>
+    {% for phone in phones %}
+        <li>
+            {{ phone.company }} {{ phone.series }} {{ phone.model }}
+            <br/>
+            <span>
+                {% if phone.available %}
+                    Items left: {{ phone.count }}
+                {% else %}
+                    Not Available
+                {% endif %}
+            </span>
+        </li>
+        <br/>
+    {% endfor %}
+</ul>
+</body>
+</html>
