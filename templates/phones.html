@@ -11,11 +11,11 @@
 <ul>
     {% for phone in phones %}
         <li>
-            {{ phone.company }} {{ phone.series }} {{ phone.model }}
-            <br/>
+            <h3>{{ phone.company }} {{ phone.series }} {{ phone.model }}</h3>
             <span>
                 {% if phone.available %}
                     Items left: {{ phone.count }}
+                    <br/><a href="" class="btn cta-buy">Buy Phone</a>
                 {% else %}
                     Not Available
                 {% endif %}
