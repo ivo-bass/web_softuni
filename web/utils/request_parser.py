@@ -42,7 +42,7 @@ def request_parser():
     paths = get_valid_paths()
     request = get_request()
     code = get_response_code(paths, request)
-    return get_full_response(code)
+    print(get_full_response(code))
 
 
-print(request_parser())
+request_parser()
